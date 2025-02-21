@@ -1,0 +1,737 @@
+{
+	"info": {
+		"_postman_id": "b884ac05-7266-4c64-8580-0ec5107515c2",
+		"name": "Sistema de Opiniones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956957"
+	},
+	"item": [
+		{
+			"name": "Funciones de Usuario",
+			"item": [
+				{
+					"name": "Crear una opinion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tittle",
+									"value": "Estoy Aburrido",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "67b8ec8c48bb995ddf2cdeec",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "Ando bien aburrido, por suerte kinal me deja mucha tarea para que tenga algo que hacer por el resto de mi semana, sin embargo ahora tengo un problema, ya no duermo mis 8 horas diarias, ahora si duermo 3 horas es una bendicion AYUDAAAAAAAA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/create/opinion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"create",
+								"opinion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Opinion",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tittle",
+									"value": "Ya no estoy aburrido",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "Ya no estoy aburrido, ahora estoy cansado porque solo he dormido 4 horas diarias desde que emprece en kinal, ni modo toca dejar de quejarse y chambear.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/update/opinion/67b8ecf948bb995ddf2cdf0f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"update",
+								"opinion",
+								"67b8ecf948bb995ddf2cdf0f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Opinion",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/delete/opinion/67b8d71b33fc51f846be59b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"delete",
+								"opinion",
+								"67b8d71b33fc51f846be59b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comentar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment",
+									"value": "Animo que los estudios requieren un esfuerzo, deje de llorar y hagarre la pala mijo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/coment/67b8e3c171034cface42aa21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"coment",
+								"67b8e3c171034cface42aa21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Perfil",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "MarioBros123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/delete/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"delete",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Perfil",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ricardo",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Martin",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "martinpro",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "martin777@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "holaaaaa",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/edit/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"edit",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar Contraseña",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "MarioBros123@",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "SoyUnCrack123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/change/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"change",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener el Feed",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/user/feed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"feed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Comentario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment",
+									"value": "Los chamacos de hoy en dia ya no aguantan nada, cuando yo era joven debiamos hacer 20 ensayos diarios",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/user/edit/comment/67b8d91b38407bc8b65d121f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"edit",
+								"comment",
+								"67b8d91b38407bc8b65d121f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Comentario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/user/delete/comment/67b8d91b38407bc8b65d121f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"delete",
+								"comment",
+								"67b8d91b38407bc8b65d121f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registro y Login",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Denis Alfredo",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Vela Velasquez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "dvela",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dvela@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "MarioBros123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login (Usuario)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data =JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\",data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "dvela",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "MarioBros123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login (Admin)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data =JSON.parse(responseBody);\r",
+									"postman.setGlobalVariable(\"token\",data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "parmas",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ParmasGoat123@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Eliminar Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/admin/delete/67b8e47171034cface42aa22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"admin",
+								"delete",
+								"67b8e47171034cface42aa22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Kinal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/admin/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"admin",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Fundacion Kinal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/admin/update/67b8eb51efe20cd5ad6c8956",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"admin",
+								"update",
+								"67b8eb51efe20cd5ad6c8956"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categorias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/admin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar categoria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/admin/get/67b6d8a2ce4a65b2b80f1cb7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"admin",
+								"get",
+								"67b6d8a2ce4a65b2b80f1cb7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
