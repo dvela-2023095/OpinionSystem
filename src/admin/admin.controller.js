@@ -1,3 +1,4 @@
+import { alreadyExist } from "../../utils/default.models.js";
 import Category from "../category/category.model.js";
 import Opinion from "../opinion/opinion.model.js";
 export const addCategory = async (req,res) => {
@@ -49,8 +50,10 @@ export const updateCategory =async(req,res)=>{
 export const deleteCategory = async(req,res)=>{
     try {
         let {id}=req.params
-        let category = await Category.findByIdAndDelete(id)
+        let category = await Category.findById(id)
         if(!category) return res.status(400).send({success:false,message:'Category not found'})
+        if(category.name === 'Un poco de Todo') return res.send({success:false,message:`Can't delete a default category`})
+        await Category.findByIdAndDelete(id)
         let def = await Category.findOne({name:'Un poco de Todo'})
         await Opinion.updateMany({category:category._id},{category:def._id})
         return res.send({success:true,message:'Category deleted'})
