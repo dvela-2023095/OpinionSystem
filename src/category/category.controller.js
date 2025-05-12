@@ -1,4 +1,3 @@
-import { alreadyExist } from "../../utils/default.models.js";
 import Category from "../category/category.model.js";
 import Opinion from "../opinion/opinion.model.js";
 export const addCategory = async (req,res) => {

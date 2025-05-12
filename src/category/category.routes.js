@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { isAdmin, validateJwt } from "../../middlewares/validateJwt.js";
-import { addCategory, deleteCategory, findCategory, listCategories, updateCategory } from "./admin.controller.js";
+import { addCategory, deleteCategory, findCategory, listCategories, updateCategory } from "./category.controller.js";
 import { categoryValidator, updatedCategoryValidator } from "../../middlewares/validations.js";
 
 const api = Router()

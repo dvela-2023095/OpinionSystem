@@ -5,7 +5,9 @@ import helmet from 'helmet'
 import cors from 'cors'
 import userRouthes from '../src/users/users.routes.js'
 import authRouthes from '../src/auth/auth.routes.js'
-import adminRouthes from '../src/admin/admin.routes.js'
+import categoryRoutes from '../src/category/category.routes.js'
+import commentRoutes from '../src/comments/comments.routes.js'
+import opinionRouthes from '../src/opinion/opinion.routes.js'
 const configs = (app)=>{
     app.use(express.json())
     app.use(express.urlencoded({extended: true}))
@@ -16,8 +18,10 @@ const configs = (app)=>{
 
  const routes = (app)=>{
     app.use('/v1/user',userRouthes)
-    app.use(authRouthes)
-    app.use('/v1/admin',adminRouthes)
+    app.use('/v1',authRouthes)
+    app.use('/v1/category',categoryRoutes)
+    app.use('/v1/comment',commentRoutes)
+    app.use('/v1/opinion',opinionRouthes)
 }
 export const initServer = ()=>{
     const app = express()
