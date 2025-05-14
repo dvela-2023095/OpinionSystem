@@ -150,18 +150,23 @@
 							"urlencoded": [
 								{
 									"key": "comment",
-									"value": "Animo que los estudios requieren un esfuerzo, deje de llorar y hagarre la pala mijo",
+									"value": "Yo tambien, pero cuando ando asi me pongo a trabajar, como debe de ser compadre",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Alguien de Internet",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/comment/coment/681ff0edb027cb363cd24bf1",
+							"raw": "http://localhost:2656/v1/comment/coment/681ff0edb027cb363cd24bf1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
 								"v1",
 								"comment",
@@ -333,12 +338,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/v1/user/feed",
+							"raw": "http://localhost:2656/v1/user/feed",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
 								"v1",
 								"user",
@@ -417,10 +422,24 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Buscar comentarios de una opinion",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2656/v1/opinion/find/681ff0edb027cb363cd24bf1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"v1",
+								"opinion",
+								"find",
+								"681ff0edb027cb363cd24bf1"
+							]
+						}
 					},
 					"response": []
 				}
@@ -626,21 +645,21 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "Kinal",
+									"value": "Practica Supervisada",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/admin/add",
+							"raw": "http://localhost:2656/v1/category/add",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
 								"v1",
-								"admin",
+								"category",
 								"add"
 							]
 						}
