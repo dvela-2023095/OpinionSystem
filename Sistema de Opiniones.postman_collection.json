@@ -30,7 +30,7 @@
 								},
 								{
 									"key": "category",
-									"value": "67b8ec8c48bb995ddf2cdeec",
+									"value": "680906b7d42e6d57831a6259",
 									"type": "text"
 								},
 								{
@@ -41,15 +41,15 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/user/create/opinion",
+							"raw": "http://localhost:2656/v1/opinion/create/opinion",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
 								"v1",
-								"user",
+								"opinion",
 								"create",
 								"opinion"
 							]
@@ -84,7 +84,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/user/update/opinion/67b8ecf948bb995ddf2cdf0f",
+							"raw": "http://localhost:2636/v1/user/update/opinion/67b9205ff0fbd05bb6831a7b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -95,7 +95,7 @@
 								"user",
 								"update",
 								"opinion",
-								"67b8ecf948bb995ddf2cdf0f"
+								"67b9205ff0fbd05bb6831a7b"
 							]
 						}
 					},
@@ -117,7 +117,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/user/delete/opinion/67b8d71b33fc51f846be59b0",
+							"raw": "http://localhost:2636/v1/user/delete/opinion/67b92062f0fbd05bb6831a7e",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -128,7 +128,7 @@
 								"user",
 								"delete",
 								"opinion",
-								"67b8d71b33fc51f846be59b0"
+								"67b92062f0fbd05bb6831a7e"
 							]
 						}
 					},
@@ -156,7 +156,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/user/coment/67b8e3c171034cface42aa21",
+							"raw": "http://localhost:2636/v1/comment/coment/681ff0edb027cb363cd24bf1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -164,9 +164,9 @@
 							"port": "2636",
 							"path": [
 								"v1",
-								"user",
+								"comment",
 								"coment",
-								"67b8e3c171034cface42aa21"
+								"681ff0edb027cb363cd24bf1"
 							]
 						}
 					},
@@ -399,7 +399,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:2636/v1/user/delete/comment/67b8d91b38407bc8b65d121f",
+							"raw": "http://localhost:2636/v1/user/delete/comment/67b92088f0fbd05bb6831a88",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -410,9 +410,17 @@
 								"user",
 								"delete",
 								"comment",
-								"67b8d91b38407bc8b65d121f"
+								"67b92088f0fbd05bb6831a88"
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
@@ -551,13 +559,14 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:2636/login",
+							"raw": "http://localhost:2656/v1/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
+								"v1",
 								"login"
 							]
 						}
@@ -585,7 +594,7 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/admin/delete/67b8e47171034cface42aa22",
+							"raw": "http://localhost:2636/v1/admin/delete/67b920f7f0fbd05bb6831aa6",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -595,7 +604,7 @@
 								"v1",
 								"admin",
 								"delete",
-								"67b8e47171034cface42aa22"
+								"67b920f7f0fbd05bb6831aa6"
 							]
 						}
 					},
