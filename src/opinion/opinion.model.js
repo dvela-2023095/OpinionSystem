@@ -2,11 +2,6 @@ import { Schema,model } from "mongoose";
 
 const opinionSchema = Schema(
     {
-        author:{
-            type:Schema.Types.ObjectId,
-            required:[true,'Author is required'],
-            ref:'User'
-        },
         tittle:{
             type:String,
             required:[true,'Title is required'],

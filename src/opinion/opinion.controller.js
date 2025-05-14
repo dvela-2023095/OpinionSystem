@@ -44,3 +44,16 @@ export const deleteOpinion = async(req,res)=>{
         return res.status(500).send({success:false,message:''})
     }
 }
+
+export const getCommentsFromOpinion = async(req,res)=>{
+    try {
+        let {id} = req.params
+        let opinion = await Opinion.findById(id).populate({path:'comments',select:'-_id author comment createdAt'})
+        if(!opinion) return res.status(400).send({success:false,message:'Opinion not found'})
+        let comments = opinion.comments
+        return res.send({success:true,message:'Comments found',comments})
+    } catch (error) {
+        console.error(error)
+        return res.status(500).send({success:false,message:'General Error Getting the comments'})
+    }
+}

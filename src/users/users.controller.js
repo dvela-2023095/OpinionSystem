@@ -63,7 +63,7 @@ export const deleteProfile = async(req,res)=>{
 export const loadFeed = async (req,res) => {
     try {
         const {limit=20,skip=0} = req.query
-        let feed = await Opinion.find().skip(skip).limit(limit).populate({path:'author',select:'-_id name'}).populate({path:'category',select:'-_id name'}).populate({path:'comments',select:'-_id comment author',populate:{path:'author',select:'-_id name'}})
+        let feed = await Opinion.find().skip(skip).limit(limit).populate({path:'category',select:'-_id name'}).populate({path:'comments',select:'-_id comment author createdAt'})
         if(feed.length===0)return res.status(400).send({success:false,message:'Opinions not found'})
         return res.send({success:true,message:'Opinions found:',feed})
     } catch (error) {

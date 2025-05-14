@@ -15,5 +15,5 @@ api.put('/edit/profile',[validateJwt,isUser,updatedUserValidator],editProfile)//
 api.put('/change/password',[validateJwt],changePassword)//lista
 
 //mostar todas las publicaciones existentes
-api.get('/feed',[validateJwt],loadFeed)//lista
+api.get('/feed',loadFeed)//lista
 export default api

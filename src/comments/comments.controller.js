@@ -8,8 +8,7 @@ export const comentOpinion = async(req,res)=>{
         let comment = new Comment(data)
         let opinion = await Opinion.findById(id)
         if(!opinion) return res.status(400).send({success:false,message:'Opinion not found'})
-        comment.author=req.user.uid
-        comment.save()
+        await comment.save()
         opinion.comments.push(comment._id)
         opinion.save()
         return res.send({success:true,message:'Coment added succesfully'})
