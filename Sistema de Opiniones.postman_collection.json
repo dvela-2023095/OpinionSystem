@@ -30,7 +30,7 @@
 								},
 								{
 									"key": "category",
-									"value": "680906b7d42e6d57831a6259",
+									"value": "68254272aefdc9508a74b6b5",
 									"type": "text"
 								},
 								{
@@ -117,18 +117,18 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:2636/v1/user/delete/opinion/67b92062f0fbd05bb6831a7e",
+							"raw": "http://localhost:2656/v1/opinion/delete/opinion/682a7c01a161572a021e50f9",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "2636",
+							"port": "2656",
 							"path": [
 								"v1",
-								"user",
+								"opinion",
 								"delete",
 								"opinion",
-								"67b92062f0fbd05bb6831a7e"
+								"682a7c01a161572a021e50f9"
 							]
 						}
 					},

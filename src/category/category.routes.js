@@ -4,7 +4,7 @@ import { addCategory, deleteCategory, findCategory, listCategories, updateCatego
 import { categoryValidator, updatedCategoryValidator } from "../../middlewares/validations.js";
 
 const api = Router()
-api.post('/add',[categoryValidator],addCategory)
+api.post('/add',[validateJwt,categoryValidator],addCategory)
 api.delete('/delete/:id',[validateJwt,isAdmin],deleteCategory)
 api.get('/',[validateJwt,isAdmin],listCategories)
 api.get('/get/:id',[validateJwt,isAdmin],findCategory)

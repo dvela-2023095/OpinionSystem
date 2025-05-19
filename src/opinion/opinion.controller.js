@@ -1,11 +1,10 @@
 import Opinion from './opinion.model.js'
+import Comment from '../comments/comments.model.js'
 //Crear una opinion
 export const createOpinion = async(req,res)=>{
     try {
         let data = req.body
         let opinion = new Opinion(data)
-        opinion.author = req.user.uid
-        if(!opinion.author)return res.status(400).send({success:false,message:'Author of the comment not found'})
         opinion.save()
         return res.send({success:true,message:'Opinion successfully added'})
     } catch (error) {
@@ -37,7 +36,7 @@ export const deleteOpinion = async(req,res)=>{
         let {id} = req.params
         let delOpinion = await Opinion.findByIdAndDelete(id)
         if(!delOpinion) return res.status(400).send({success:false,message:'Opinion not found'})
-        Comment.deleteMany({opinion:delOpinion._id})
+        await Comment.deleteMany({opinion:delOpinion._id})
         return res.send({success:true,message:'Opinion deleted'})
     } catch (error) {
         console.error(error)

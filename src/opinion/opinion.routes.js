@@ -6,6 +6,6 @@ import { limiter } from "../../middlewares/rate.limit.js"
 const api = Router()
 api.post('/create/opinion',[validateJwt,opinionValidator],createOpinion)//lista
 api.put('/update/opinion/:id',[validateJwt,isMyOpinion,updatedOpinionValidator],updateOpinion)//lista
-api.delete('/delete/opinion/:id',[validateJwt,isMyOpinion],deleteOpinion)//lista
+api.delete('/delete/opinion/:id',[validateJwt],deleteOpinion)//lista
 api.get('/find/:id',[limiter],getCommentsFromOpinion)
 export default api
